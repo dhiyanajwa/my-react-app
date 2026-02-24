@@ -54,6 +54,7 @@ export const jasonData = {
   name: "JASON ONG LEE CHANG",
   title: "Computer Science Intern",
   email: "jaxonong04@gmail.com",
+  linkedin: "linkedin.com/in/jaxonong04",
   location: "Sarawak, Malaysia",
   phone: "011-1085 0911",
   objective: "Passionate Computer Science student specializing in Multimedia Computing. Eager to apply my skills in UI/UX design, web application development, and object-oriented programming to solve real-world problems and contribute to innovative tech teams.",
