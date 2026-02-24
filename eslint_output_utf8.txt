@@ -1,0 +1,6 @@
+
+C:\Users\User\Desktop\sideproject\resume\my-react-app\src\Components\Objective.jsx
+  7:7  error  Fast refresh only works when a file has exports. Move your component(s) to a separate file  react-refresh/only-export-components
+
+✖ 1 problem (1 error, 0 warnings)
+
