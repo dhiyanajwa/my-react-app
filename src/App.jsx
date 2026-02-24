@@ -66,7 +66,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ width: '100%', minHeight: '100vh', py: { xs: 2, md: 5 } }}>
+      <Box
+        sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          py: 5,
+        }}
+      >
         <Container maxWidth="md">
           {/* Main Paper acts as the "Page" */}
           <Paper elevation={4} sx={{ p: { xs: 3, md: 6 }, borderRadius: 2, backgroundColor: '#ffffff' }}>
