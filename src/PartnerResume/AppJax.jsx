@@ -34,7 +34,7 @@ const projects = [
   },
 ];
 
-export default function App() {
+export default function PartnerResume() {
   return (
     <div className="app">
       <header className="header">

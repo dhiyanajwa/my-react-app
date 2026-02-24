@@ -13,6 +13,8 @@ import CodeIcon from '@mui/icons-material/Code';
 import BuildIcon from '@mui/icons-material/Build';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 
+import PartnerResume from './PartnerResume/AppJax';
+
 // Create a custom theme for a professional, cohesive look
 const theme = createTheme({
   palette: {
@@ -268,6 +270,32 @@ function App() {
                 References are available upon request.
               </Typography>
             </Box>
+
+            {/* ... previous code ... */}
+
+            <Divider sx={{ my: 4 }} />
+
+            {/* References */}
+            <Box sx={{ textAlign: 'center', pb: 2 }}>
+              <Typography variant="body2" color="text.secondary" fontStyle="italic">
+                References are available upon request.
+              </Typography>
+            </Box>
+
+            {/* ============================================== */}
+            {/* ADD THIS SECTION HERE TO SHOW PARTNER'S RESUME */}
+            {/* ============================================== */}
+            
+            <Divider sx={{ my: 8, borderBottomWidth: 5, borderColor: 'primary.main' }} />
+            
+            <Box sx={{ textAlign: 'center', mb: 4 }}>
+               <Typography variant="h3" color="primary.main">PARTNER RESUME</Typography>
+            </Box>
+
+            {/* This is the line that actually makes it appear! */}
+            <PartnerResume />  
+
+            {/* ============================================== */}
 
           </Paper>
         </Container>
