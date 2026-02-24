@@ -3,6 +3,8 @@ export const dhiyaData = {
   title: "Aspiring Software Intern",
   email: "dhiyanajwaatma1227@gmail.com",
   linkedin: "linkedin.com/in/dhiyanajwaatma",
+  location: "Sarawak, Malaysia",
+  phone: "011-2506 1317",
   objective: "Reliable and adaptable Computer Science (Multimedia Computing) student seeking skills in programming, troubleshooting, and system management. Proficient in English with strong communication skills, able to work under pressure, manage multiple tasks efficiently, and committed to continuous learning in the technology field.",
   education: [
     {

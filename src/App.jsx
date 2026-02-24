@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { ThemeProvider, CssBaseline, Box, Container, Typography, IconButton, createTheme } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4'; // Moon
 import Brightness7Icon from '@mui/icons-material/Brightness7'; // Sun
+=======
+import React, { useState } from 'react';
+import { ThemeProvider, CssBaseline, Box, Container, Typography } from '@mui/material';
+>>>>>>> a9e44a9e1ad0f77c1f549a776b5fbee3402a19f5
 
 // Import the function from your theme file
 import { getDesignTokens } from './theme';
@@ -11,9 +16,11 @@ import { dhiyaData, jasonData } from './data/resumeData';
 
 // Import Components
 import ResumeTemplate from './Components/ResumeTemplate';
+import WelcomePage from './Components/WelcomePage';
 import Footer from './Components/Footer';
 
 export default function App() {
+<<<<<<< HEAD
   // 1. Manage mode state
   const [mode, setMode] = useState('light');
 
@@ -22,6 +29,23 @@ export default function App() {
 
   const toggleTheme = () => {
     setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
+=======
+  // State to track which page we are on ('home', 'dhiya', or 'jason')
+  const [currentView, setCurrentView] = useState('home');
+
+  // Function to decide what to show on the screen
+  const renderView = () => {
+    switch(currentView) {
+      case 'dhiya':
+        return <ResumeTemplate data={dhiyaData} onBack={() => setCurrentView('home')} />;
+      case 'jason':
+        return <ResumeTemplate data={jasonData} onBack={() => setCurrentView('home')} />;
+      case 'home':
+      default:
+        // Pass the setCurrentView function to the WelcomePage so it can change the page!
+        return <WelcomePage onSelect={setCurrentView} />;
+    }
+>>>>>>> a9e44a9e1ad0f77c1f549a776b5fbee3402a19f5
   };
 
   return (
@@ -46,6 +70,7 @@ export default function App() {
       }}>
         <Container maxWidth="md" sx={{ flexGrow: 1, py: { xs: 2, md: 5 } }}>
           
+<<<<<<< HEAD
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Typography variant="h3" color="primary.main" fontWeight="bold">
               Internship Applications
@@ -63,6 +88,10 @@ export default function App() {
           <Box sx={{ mb: 8, width: '100%' }}>
             <ResumeTemplate data={jasonData} />
           </Box>
+=======
+          {/* Renders the correct view based on the state */}
+          {renderView()}
+>>>>>>> a9e44a9e1ad0f77c1f549a776b5fbee3402a19f5
 
         </Container>
         
