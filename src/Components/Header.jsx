@@ -20,11 +20,19 @@ const Header = ({ name, title, email, linkedin, phone, location }) => (
         </Box>
       )}
       {linkedin && (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <LinkedInIcon fontSize="small" color="action" />
-          <Typography variant="body2" color="text.secondary">{linkedin}</Typography>
-        </Box>
-      )}
+  <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+    <LinkedInIcon fontSize="small" color="action" />
+    <Link 
+      href={`https://${linkedin}`} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      underline="hover" 
+      color="text.secondary"
+    >
+      {linkedin}
+    </Link>
+  </Box>
+)}
       {phone && (
         <Typography variant="body2" color="text.secondary">📞 {phone}</Typography>
       )}
