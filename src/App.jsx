@@ -271,17 +271,6 @@ function App() {
               </Typography>
             </Box>
 
-            {/* ... previous code ... */}
-
-            <Divider sx={{ my: 4 }} />
-
-            {/* References */}
-            <Box sx={{ textAlign: 'center', pb: 2 }}>
-              <Typography variant="body2" color="text.secondary" fontStyle="italic">
-                References are available upon request.
-              </Typography>
-            </Box>
-
             {/* ============================================== */}
             {/* ADD THIS SECTION HERE TO SHOW PARTNER'S RESUME */}
             {/* ============================================== */}
