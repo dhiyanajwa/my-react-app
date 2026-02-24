@@ -1,0 +1,146 @@
+/* Basic reset / consistent sizing */
+* { box-sizing: border-box; }
+
+.app {
+  min-height: 100vh;
+  background: rgb(222, 232, 235);
+  color: #111;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 16px;
+  background: rgb(127, 178, 226);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.headerInfo .name {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.muted {
+  margin: 6px 0 0 0;
+  opacity: 0.85;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 16px 80px;
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 0 0 12px 0;
+}
+
+.subTitle {
+  text-align: center;
+  margin: 0 0 18px 0;
+  opacity: 0.8;
+}
+
+/* Reusable layouts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stack {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+/* One card style for everything */
+.card {
+  width: 100%;
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+.cardWide {
+  max-width: 700px;
+  text-align: left;
+}
+
+.eduLine {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.dot { margin-top: 2px; }
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cardWide {
+    text-align: left;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgb(127, 178, 226);
+  font-size: 14px;
+}
