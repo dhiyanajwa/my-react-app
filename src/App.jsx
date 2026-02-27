@@ -11,6 +11,7 @@ import { dhiyaData, jasonData } from './data/resumeData';
 import ResumeTemplate from './Components/ResumeTemplate';
 import WelcomePage from './Components/WelcomePage';
 import Footer from './Components/Footer';
+import AiChatbot from './Components/AiChatbot';
 
 export default function App() {
   // State to track which page we are on ('home', 'dhiya', or 'jason')
@@ -18,7 +19,7 @@ export default function App() {
 
   // Function to decide what to show on the screen
   const renderView = () => {
-    switch(currentView) {
+    switch (currentView) {
       case 'dhiya':
         return <ResumeTemplate data={dhiyaData} onBack={() => setCurrentView('home')} />;
       case 'jason':
@@ -35,16 +36,19 @@ export default function App() {
       <CssBaseline />
       <Box sx={{ width: '100%', minHeight: '100vh', pt: { xs: 2, md: 5 }, display: 'flex', flexDirection: 'column' }}>
         <Container maxWidth="md" sx={{ flexGrow: 1 }}>
-          
+
           {/* Renders the correct view based on the state */}
           {renderView()}
 
         </Container>
-        
+
         {/* Render Footer */}
         <Footer />
-        
+
       </Box>
+
+      {/* AI Chatbot — floating on all pages */}
+      <AiChatbot currentView={currentView} />
     </ThemeProvider>
   );
 }
